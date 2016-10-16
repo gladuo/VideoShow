@@ -26,13 +26,20 @@ namespace Demo
         private bool _updatingMediaTimeline = false;
         public List<Rank> Ranks { get; set; }
         public ObservableCollection<Comment> Comments { get; set; }
+        public string _address;
         public Preview()
         {
             this.InitializeComponent();
             Load();
             GetRank();
             GetComment();
+            
+        }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            _address = e.Parameter.ToString();
+            base.OnNavigatedTo(e);
         }
 
         private void Slider_OnValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -41,7 +48,7 @@ namespace Demo
             {
                 TimeSpan duration = MediaPlayer.NaturalDuration.TimeSpan;
                 int newPosition = (int)(duration.TotalSeconds * Slider.Value);
-                MediaPlayer.Position=new TimeSpan(0,0,newPosition);
+                MediaPlayer.Position = new TimeSpan(0, 0, newPosition);
             }
         }
 
@@ -68,7 +75,8 @@ namespace Demo
         private void Load()
         {
             _updatingMediaTimeline = false;
-            var newUri = new InternalUri() { Url = new Uri("http://139.198.3.216/guoamo.mp4") };
+            var newUri = new InternalUri() { Url = new Uri(_address) };
+            //fixme
             MediaPlayer.Source = newUri.Url;
             MediaPlayer.Position = TimeSpan.FromSeconds(0);
             MediaPlayer.DownloadProgressChanged += (s, ee) =>
@@ -134,7 +142,7 @@ namespace Demo
         public void GetComment()
         {
             Comments = new ObservableCollection<Comment>();
-            Comments.Add(new Comment() { Name = "专家柴先生",Performance="183赞", _Comment = "87年前，我们的祖辈基于自由的构想和致力于实现人人平等的主张，在这个大陆上建立了一个新国家。如今，我们投身于一场伟大的内战，检验我们这个国家，或者其他任何拥有这种构想和主张的国家，是否能够永久存在。" });
+            Comments.Add(new Comment() { Name = "专家柴先生", Performance = "183赞", _Comment = "87年前，我们的祖辈基于自由的构想和致力于实现人人平等的主张，在这个大陆上建立了一个新国家。如今，我们投身于一场伟大的内战，检验我们这个国家，或者其他任何拥有这种构想和主张的国家，是否能够永久存在。" });
             Comments.Add(new Comment() { Name = "开发团队", Performance = "15赞", _Comment = "我们在这个伟大的战场上相逢。我们将这块战场上的一小部分土地奉献给那些为了民族生存而献出他们生命的人们，以作为他们最后的安息之地。" });
             CommentList.ItemsSource = Comments;
         }

@@ -141,8 +141,8 @@ namespace Demo.Demo_XamlTypeInfo
             _typeNameTable[5] = "System.Collections.Generic.List`1<Demo.Home.Item>";
             _typeNameTable[6] = "Object";
             _typeNameTable[7] = "Demo.Home.Item";
-            _typeNameTable[8] = "String";
-            _typeNameTable[9] = "Int32";
+            _typeNameTable[8] = "Int32";
+            _typeNameTable[9] = "String";
             _typeNameTable[10] = "Demo.MainPage";
             _typeNameTable[11] = "Demo.Duel";
             _typeNameTable[12] = "Demo.Person";
@@ -163,8 +163,8 @@ namespace Demo.Demo_XamlTypeInfo
             _typeTable[5] = typeof(global::System.Collections.Generic.List<global::Demo.Home.Item>);
             _typeTable[6] = typeof(global::System.Object);
             _typeTable[7] = typeof(global::Demo.Home.Item);
-            _typeTable[8] = typeof(global::System.String);
-            _typeTable[9] = typeof(global::System.Int32);
+            _typeTable[8] = typeof(global::System.Int32);
+            _typeTable[9] = typeof(global::System.String);
             _typeTable[10] = typeof(global::Demo.MainPage);
             _typeTable[11] = typeof(global::Demo.Duel);
             _typeTable[12] = typeof(global::Demo.Person);
@@ -298,19 +298,20 @@ namespace Demo.Demo_XamlTypeInfo
 
             case 7:   //  Demo.Home.Item
                 userType = new global::Demo.Demo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("Uid");
                 userType.AddMemberName("Title");
                 userType.AddMemberName("Subtitle");
                 userType.AddMemberName("Image");
-                userType.AddMemberName("Uid");
+                userType.AddMemberName("Address");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  String
+            case 8:   //  Int32
                 xamlType = new global::Demo.Demo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  Int32
+            case 9:   //  String
                 xamlType = new global::Demo.Demo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
@@ -402,132 +403,142 @@ namespace Demo.Demo_XamlTypeInfo
             var that = (global::Demo.Home)instance;
             that.Items = (global::System.Collections.Generic.List<global::Demo.Home.Item>)Value;
         }
-        private object get_1_Item_Title(object instance)
-        {
-            var that = (global::Demo.Home.Item)instance;
-            return that.Title;
-        }
-        private void set_1_Item_Title(object instance, object Value)
-        {
-            var that = (global::Demo.Home.Item)instance;
-            that.Title = (global::System.String)Value;
-        }
-        private object get_2_Item_Subtitle(object instance)
-        {
-            var that = (global::Demo.Home.Item)instance;
-            return that.Subtitle;
-        }
-        private void set_2_Item_Subtitle(object instance, object Value)
-        {
-            var that = (global::Demo.Home.Item)instance;
-            that.Subtitle = (global::System.String)Value;
-        }
-        private object get_3_Item_Image(object instance)
-        {
-            var that = (global::Demo.Home.Item)instance;
-            return that.Image;
-        }
-        private void set_3_Item_Image(object instance, object Value)
-        {
-            var that = (global::Demo.Home.Item)instance;
-            that.Image = (global::System.String)Value;
-        }
-        private object get_4_Item_Uid(object instance)
+        private object get_1_Item_Uid(object instance)
         {
             var that = (global::Demo.Home.Item)instance;
             return that.Uid;
         }
-        private void set_4_Item_Uid(object instance, object Value)
+        private void set_1_Item_Uid(object instance, object Value)
         {
             var that = (global::Demo.Home.Item)instance;
             that.Uid = (global::System.Int32)Value;
         }
-        private object get_5_Preview_Ranks(object instance)
+        private object get_2_Item_Title(object instance)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            return that.Title;
+        }
+        private void set_2_Item_Title(object instance, object Value)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            that.Title = (global::System.String)Value;
+        }
+        private object get_3_Item_Subtitle(object instance)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            return that.Subtitle;
+        }
+        private void set_3_Item_Subtitle(object instance, object Value)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            that.Subtitle = (global::System.String)Value;
+        }
+        private object get_4_Item_Image(object instance)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            return that.Image;
+        }
+        private void set_4_Item_Image(object instance, object Value)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            that.Image = (global::System.String)Value;
+        }
+        private object get_5_Item_Address(object instance)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            return that.Address;
+        }
+        private void set_5_Item_Address(object instance, object Value)
+        {
+            var that = (global::Demo.Home.Item)instance;
+            that.Address = (global::System.String)Value;
+        }
+        private object get_6_Preview_Ranks(object instance)
         {
             var that = (global::Demo.Preview)instance;
             return that.Ranks;
         }
-        private void set_5_Preview_Ranks(object instance, object Value)
+        private void set_6_Preview_Ranks(object instance, object Value)
         {
             var that = (global::Demo.Preview)instance;
             that.Ranks = (global::System.Collections.Generic.List<global::Demo.Preview.Rank>)Value;
         }
-        private object get_6_Rank_Num(object instance)
+        private object get_7_Rank_Num(object instance)
         {
             var that = (global::Demo.Preview.Rank)instance;
             return that.Num;
         }
-        private void set_6_Rank_Num(object instance, object Value)
+        private void set_7_Rank_Num(object instance, object Value)
         {
             var that = (global::Demo.Preview.Rank)instance;
             that.Num = (global::System.String)Value;
         }
-        private object get_7_Rank_Name(object instance)
+        private object get_8_Rank_Name(object instance)
         {
             var that = (global::Demo.Preview.Rank)instance;
             return that.Name;
         }
-        private void set_7_Rank_Name(object instance, object Value)
+        private void set_8_Rank_Name(object instance, object Value)
         {
             var that = (global::Demo.Preview.Rank)instance;
             that.Name = (global::System.String)Value;
         }
-        private object get_8_Rank_Image(object instance)
+        private object get_9_Rank_Image(object instance)
         {
             var that = (global::Demo.Preview.Rank)instance;
             return that.Image;
         }
-        private void set_8_Rank_Image(object instance, object Value)
+        private void set_9_Rank_Image(object instance, object Value)
         {
             var that = (global::Demo.Preview.Rank)instance;
             that.Image = (global::System.String)Value;
         }
-        private object get_9_Rank_Similiarity(object instance)
+        private object get_10_Rank_Similiarity(object instance)
         {
             var that = (global::Demo.Preview.Rank)instance;
             return that.Similiarity;
         }
-        private void set_9_Rank_Similiarity(object instance, object Value)
+        private void set_10_Rank_Similiarity(object instance, object Value)
         {
             var that = (global::Demo.Preview.Rank)instance;
             that.Similiarity = (global::System.Double)Value;
         }
-        private object get_10_Preview_Comments(object instance)
+        private object get_11_Preview_Comments(object instance)
         {
             var that = (global::Demo.Preview)instance;
             return that.Comments;
         }
-        private void set_10_Preview_Comments(object instance, object Value)
+        private void set_11_Preview_Comments(object instance, object Value)
         {
             var that = (global::Demo.Preview)instance;
             that.Comments = (global::System.Collections.ObjectModel.ObservableCollection<global::Demo.Preview.Comment>)Value;
         }
-        private object get_11_Comment_Name(object instance)
+        private object get_12_Comment_Name(object instance)
         {
             var that = (global::Demo.Preview.Comment)instance;
             return that.Name;
         }
-        private void set_11_Comment_Name(object instance, object Value)
+        private void set_12_Comment_Name(object instance, object Value)
         {
             var that = (global::Demo.Preview.Comment)instance;
             that.Name = (global::System.String)Value;
         }
-        private object get_12_Comment__Comment(object instance)
+        private object get_13_Comment__Comment(object instance)
         {
             var that = (global::Demo.Preview.Comment)instance;
             return that._Comment;
         }
-        private void set_12_Comment__Comment(object instance, object Value)
+        private void set_13_Comment__Comment(object instance, object Value)
         {
             var that = (global::Demo.Preview.Comment)instance;
             that._Comment = (global::System.String)Value;
         }
-        private object get_13_Comment_Performance(object instance)
+        private object get_14_Comment_Performance(object instance)
         {
             var that = (global::Demo.Preview.Comment)instance;
             return that.Performance;
         }
-        private void set_13_Comment_Performance(object instance, object Value)
+        private void set_14_Comment_Performance(object instance, object Value)
         {
             var that = (global::Demo.Preview.Comment)instance;
             that.Performance = (global::System.String)Value;
@@ -546,83 +557,89 @@ namespace Demo.Demo_XamlTypeInfo
                 xamlMember.Getter = get_0_Home_Items;
                 xamlMember.Setter = set_0_Home_Items;
                 break;
+            case "Demo.Home.Item.Uid":
+                userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Home.Item");
+                xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Uid", "Int32");
+                xamlMember.Getter = get_1_Item_Uid;
+                xamlMember.Setter = set_1_Item_Uid;
+                break;
             case "Demo.Home.Item.Title":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Home.Item");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Title", "String");
-                xamlMember.Getter = get_1_Item_Title;
-                xamlMember.Setter = set_1_Item_Title;
+                xamlMember.Getter = get_2_Item_Title;
+                xamlMember.Setter = set_2_Item_Title;
                 break;
             case "Demo.Home.Item.Subtitle":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Home.Item");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Subtitle", "String");
-                xamlMember.Getter = get_2_Item_Subtitle;
-                xamlMember.Setter = set_2_Item_Subtitle;
+                xamlMember.Getter = get_3_Item_Subtitle;
+                xamlMember.Setter = set_3_Item_Subtitle;
                 break;
             case "Demo.Home.Item.Image":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Home.Item");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Image", "String");
-                xamlMember.Getter = get_3_Item_Image;
-                xamlMember.Setter = set_3_Item_Image;
+                xamlMember.Getter = get_4_Item_Image;
+                xamlMember.Setter = set_4_Item_Image;
                 break;
-            case "Demo.Home.Item.Uid":
+            case "Demo.Home.Item.Address":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Home.Item");
-                xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Uid", "Int32");
-                xamlMember.Getter = get_4_Item_Uid;
-                xamlMember.Setter = set_4_Item_Uid;
+                xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Address", "String");
+                xamlMember.Getter = get_5_Item_Address;
+                xamlMember.Setter = set_5_Item_Address;
                 break;
             case "Demo.Preview.Ranks":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Ranks", "System.Collections.Generic.List`1<Demo.Preview.Rank>");
-                xamlMember.Getter = get_5_Preview_Ranks;
-                xamlMember.Setter = set_5_Preview_Ranks;
+                xamlMember.Getter = get_6_Preview_Ranks;
+                xamlMember.Setter = set_6_Preview_Ranks;
                 break;
             case "Demo.Preview.Rank.Num":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Rank");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Num", "String");
-                xamlMember.Getter = get_6_Rank_Num;
-                xamlMember.Setter = set_6_Rank_Num;
+                xamlMember.Getter = get_7_Rank_Num;
+                xamlMember.Setter = set_7_Rank_Num;
                 break;
             case "Demo.Preview.Rank.Name":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Rank");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_7_Rank_Name;
-                xamlMember.Setter = set_7_Rank_Name;
+                xamlMember.Getter = get_8_Rank_Name;
+                xamlMember.Setter = set_8_Rank_Name;
                 break;
             case "Demo.Preview.Rank.Image":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Rank");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Image", "String");
-                xamlMember.Getter = get_8_Rank_Image;
-                xamlMember.Setter = set_8_Rank_Image;
+                xamlMember.Getter = get_9_Rank_Image;
+                xamlMember.Setter = set_9_Rank_Image;
                 break;
             case "Demo.Preview.Rank.Similiarity":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Rank");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Similiarity", "Double");
-                xamlMember.Getter = get_9_Rank_Similiarity;
-                xamlMember.Setter = set_9_Rank_Similiarity;
+                xamlMember.Getter = get_10_Rank_Similiarity;
+                xamlMember.Setter = set_10_Rank_Similiarity;
                 break;
             case "Demo.Preview.Comments":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Comments", "System.Collections.ObjectModel.ObservableCollection`1<Demo.Preview.Comment>");
-                xamlMember.Getter = get_10_Preview_Comments;
-                xamlMember.Setter = set_10_Preview_Comments;
+                xamlMember.Getter = get_11_Preview_Comments;
+                xamlMember.Setter = set_11_Preview_Comments;
                 break;
             case "Demo.Preview.Comment.Name":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Comment");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_11_Comment_Name;
-                xamlMember.Setter = set_11_Comment_Name;
+                xamlMember.Getter = get_12_Comment_Name;
+                xamlMember.Setter = set_12_Comment_Name;
                 break;
             case "Demo.Preview.Comment._Comment":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Comment");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "_Comment", "String");
-                xamlMember.Getter = get_12_Comment__Comment;
-                xamlMember.Setter = set_12_Comment__Comment;
+                xamlMember.Getter = get_13_Comment__Comment;
+                xamlMember.Setter = set_13_Comment__Comment;
                 break;
             case "Demo.Preview.Comment.Performance":
                 userType = (global::Demo.Demo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Demo.Preview.Comment");
                 xamlMember = new global::Demo.Demo_XamlTypeInfo.XamlMember(this, "Performance", "String");
-                xamlMember.Getter = get_13_Comment_Performance;
-                xamlMember.Setter = set_13_Comment_Performance;
+                xamlMember.Getter = get_14_Comment_Performance;
+                xamlMember.Setter = set_14_Comment_Performance;
                 break;
             }
             return xamlMember;

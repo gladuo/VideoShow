@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-16T02:21:34.768</Modified>
+      <Modified>2016-10-16T02:49:38.165</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\bin\x86\Debug\Demo.exe">
       <PackagePath>entrypoint\Demo.exe</PackagePath>
-      <Modified>2016-10-16T02:21:34.548</Modified>
+      <Modified>2016-10-16T02:49:37.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ldzha\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -512,15 +512,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\json\1.txt">
       <PackagePath>json\1.txt</PackagePath>
-      <Modified>2016-10-16T01:47:03.098</Modified>
+      <Modified>2016-10-16T02:42:36.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\json\2.txt">
       <PackagePath>json\2.txt</PackagePath>
-      <Modified>2016-10-16T02:11:47.294</Modified>
+      <Modified>2016-10-16T02:41:57.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\json\3.txt">
       <PackagePath>json\3.txt</PackagePath>
-      <Modified>2016-10-16T02:13:48.719</Modified>
+      <Modified>2016-10-16T02:41:57.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -541,7 +541,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ldzha\documents\visual studio 2015\Projects\Demo\Demo\bin\x86\Debug\Core\Demo.exe">
       <PackagePath>Demo.exe</PackagePath>
-      <Modified>2016-10-16T02:21:34.765</Modified>
+      <Modified>2016-10-16T02:49:38.162</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
