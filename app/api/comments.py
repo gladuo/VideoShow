@@ -9,7 +9,7 @@ def get_show_comments(id):
     show = Show.query.get_or_404(id)
     page = request.args.get('page', 1, type=int)
     pagination = show.comments.order_by(Comment.timestamp.asc()).paginate(
-        page, per_page=current_app.config['COMMENTS_PER_PAGE'],
+        page=page, per_page=current_app.config['COMMENTS_PER_PAGE'],
         error_out=False)
     comments = pagination.items
     prev = None

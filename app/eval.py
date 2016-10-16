@@ -7,9 +7,18 @@ json_str = '{"status": "Succeeded", "progress": 100, "createdDateTime": "2016-10
 
 def cal_dis(json_str):
     result = json.loads(json_str.strip().replace('\r\n', '').replace('\"', '"').replace('"{', '{').replace('}"', '}'))['processingResult']
+    new_video_matrix = []
     for i in result['fragments']:
         cls = i['events'][0][0]['windowFaceDistribution']
-        print cls
+        f = False
+        for j, k in enumerate(cls.items()):
+            if k[1] == 1:
+                new_video_matrix.append(j)
+                f = True
+                break
+        if not f:
+            new_video_matrix.append(0)
+    print new_video_matrix
 
 
 if __name__ == '__main__':
